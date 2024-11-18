@@ -34,11 +34,10 @@ public class WeatherController {
     @FXML
     private Button searchButton;
 
-    private final String apiKey = "c1065d994625de6b07ac608566f18177";
+    private final String apiKey = "YOUR_API_KEY"; //Put here your API key
 
     @FXML
     private void initialize() {
-        // Add key listener to handle "Enter" key press in the TextField
         searchBox.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 handleSearchButtonClick();
@@ -82,7 +81,7 @@ public class WeatherController {
         connection.setRequestMethod("GET");
 
         int responseCode = connection.getResponseCode();
-        if (responseCode == 200) { // HTTP OK
+        if (responseCode == 200) {
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             StringBuilder response = new StringBuilder();
             String line;
