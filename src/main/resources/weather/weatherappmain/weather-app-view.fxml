@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to bottom, #3C8DAD, #B6E2F3); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="weather.weatherappmain.WeatherController">
+   <children>
+      <!-- App Title -->
+      <Label alignment="CENTER_RIGHT" layoutX="-36.0" layoutY="43.0" prefHeight="60.0" prefWidth="350.0" style="-fx-font-weight: bold;" text="Weather App" textFill="#ffffff">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Label>
+
+      <!-- Search Box -->
+      <TextField fx:id="searchBox" layoutX="30.0" layoutY="130.0" prefHeight="35.0" prefWidth="220.0" promptText="Enter city name" style="-fx-background-radius: 15; -fx-font-size: 14; -fx-border-color: #ffffff; -fx-border-radius: 15; -fx-padding: 5;" />
+
+      <!-- Search Button -->
+      <Button fx:id="searchButton" layoutX="260.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleSearchButtonClick" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50; -fx-text-fill: #3C8DAD; -fx-font-weight: bold;" text="GO" />
+
+      <!-- Weather Information -->
+      <Label fx:id="name" layoutX="30.0" layoutY="224.0" opacity="0.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 16;" text="City: " textFill="#ffffff" />
+      <Label fx:id="temperatureNow" layoutX="30.0" layoutY="273.0" opacity="0.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 16;" text="Current Temperature: " textFill="#ffffff" />
+      <Label fx:id="minTemp" layoutX="30.0" layoutY="312.0" opacity="0.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 16;" text="Min Temp: " textFill="#ffffff" />
+      <Label fx:id="maxTemp" layoutX="30.0" layoutY="352.0" opacity="0.0" prefHeight="25.0" prefWidth="300.0" style="-fx-font-size: 16;" text="Max Temp: " textFill="#ffffff" />
+      <Label layoutX="246.0" layoutY="468.0" text="Designed by A.T." textFill="#003161" />
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="30.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@weather.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
