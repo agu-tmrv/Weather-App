@@ -18,9 +18,6 @@ public class WeatherApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 350, 500);
         scene.setFill(Color.TRANSPARENT);
         stage.setResizable(false);
-        stage.setResizable(false);
-        stage.setResizable(false);
-        stage.setResizable(false);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setTitle("WeatherApp!");
         scene.setOnMousePressed(event -> {
